@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/expItems"
+        android:title="Expired Products"
+        android:icon="@drawable/ic_expired"/>
+
+    <item
+        android:id="@+id/baseItems"
+        android:title="Add Base Products"
+        android:icon="@drawable/ic_add_base_products"/>
+
+    <item
+        android:id="@+id/scannerBtn"
+        android:title="Scan Add"
+        android:icon="@drawable/ic_scanner"/>
+</menu>

@@ -7,14 +7,15 @@
     tools:context=".ExpiredItemsActivity">
 
     <!-- Recyclerview: shows items-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/expiredItemsRv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/row_card_record"
+        android:clipToPadding="false"
         android:paddingBottom="80dp"
-        android:clipToPadding="false"/>
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_card_record" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

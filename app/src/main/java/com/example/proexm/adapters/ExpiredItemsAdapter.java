@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -72,6 +73,7 @@ public class ExpiredItemsAdapter extends RecyclerView.Adapter<ExpiredItemsAdapte
         //holder.itemIv.setImageURI(Uri.parse(itemImage));
         holder.priceTv.setText("Price:" +itemPrice);
         holder.expDateTv.setText("Expiry Date: "+itemExp);
+
         holder.mfdDateTv.setText("Status "+itemStatus);
 
         //if item has no image
@@ -190,6 +192,7 @@ public class ExpiredItemsAdapter extends RecyclerView.Adapter<ExpiredItemsAdapte
             priceTv = itemView.findViewById(R.id.priceTv);
             mfdDateTv = itemView.findViewById(R.id.mfdDateTv);
             expDateTv = itemView.findViewById(R.id.expDateTv);
+            expDateTv.setTextColor(Color.RED);
             moreBtn = itemView.findViewById(R.id.moreBtn);
         }
     }

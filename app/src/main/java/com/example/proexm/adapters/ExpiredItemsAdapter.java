@@ -68,6 +68,14 @@ public class ExpiredItemsAdapter extends RecyclerView.Adapter<ExpiredItemsAdapte
         final String addedTime = model.getAddedTime();
         final String updatedTime = model.getUpdatedTime();
 
+        String exp = "EXPIRED";
+        if(itemStatus.matches("Expired")){
+            holder.expDateTv.setTextColor(Color.RED);
+            holder.mfdDateTv.setTextColor(Color.RED);
+        } else {
+            holder.expDateTv.setTextColor(Color.GREEN);
+            holder.mfdDateTv.setTextColor(Color.GREEN);
+        }
         //set data to views
         holder.itemNameTv.setText("Name: "+itemName);
         //holder.itemIv.setImageURI(Uri.parse(itemImage));
@@ -192,7 +200,7 @@ public class ExpiredItemsAdapter extends RecyclerView.Adapter<ExpiredItemsAdapte
             priceTv = itemView.findViewById(R.id.priceTv);
             mfdDateTv = itemView.findViewById(R.id.mfdDateTv);
             expDateTv = itemView.findViewById(R.id.expDateTv);
-            expDateTv.setTextColor(Color.RED);
+            //expDateTv.setTextColor(Color.RED);
             moreBtn = itemView.findViewById(R.id.moreBtn);
         }
     }

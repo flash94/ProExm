@@ -139,6 +139,7 @@
                 android:layout_marginTop="32dp"
                 android:text="Log me in as Admin"
                 android:onClick="checkButton"
+                android:buttonTint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 
@@ -150,6 +151,7 @@
                 android:text="I am not an admin"
                 android:onClick="checkButton"
                 android:checked="true"
+                android:buttonTint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 

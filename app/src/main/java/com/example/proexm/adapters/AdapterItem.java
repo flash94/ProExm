@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -72,12 +73,22 @@ public class AdapterItem extends RecyclerView.Adapter<AdapterItem.ItemHolderReco
         final String addedTime = model.getAddedTime();
         final String updatedTime = model.getUpdatedTime();
 
+
         //set data to views
         holder.itemNameTv.setText("Name: "+itemName);
         //holder.itemIv.setImageURI(Uri.parse(itemImage));
         holder.priceTv.setText("Price:" +itemPrice);
         holder.expDateTv.setText("Expiry Date: "+itemExp);
         holder.mfdDateTv.setText("Status: "+itemStatus);
+
+        String exp = "EXPIRED";
+        if(itemStatus.matches("Expired")){
+            holder.expDateTv.setTextColor(Color.RED);
+            holder.mfdDateTv.setTextColor(Color.RED);
+        } else {
+            holder.expDateTv.setTextColor(Color.GREEN);
+            holder.mfdDateTv.setTextColor(Color.GREEN);
+        }
 
 
         //if item has no image
